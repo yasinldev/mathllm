@@ -1,0 +1,10 @@
+api_base: https://teacher.example.com/v1
+model: openmath-nemotron-14b
+api_key: ${TEACHER_API_KEY}
+max_new_tokens: 800
+temperature: 0.2
+top_p: 0.9
+system_prompt: |
+  You are MathLLM's teacher model. Return JSON plans with a steps array.
+cache_path: runs/teacher_cache.jsonl
+rate_limit_per_minute: 30

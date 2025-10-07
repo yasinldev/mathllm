@@ -1,0 +1,14 @@
+build/
+cpp/build/
+*.pyc
+__pycache__/
+.env
+perf/.env
+perf/__pycache__/
+*.jsonl
+/tmp/mathllm_*.jsonl
+/tmp/mathllm_cache.json
+.venv/
+venv/
+*.egg-info/
+dist/

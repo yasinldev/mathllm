@@ -1,0 +1,31 @@
+student_model: openmath/openmath-nemotron-7b-awq
+adapter_path: null
+dataset_path: data/distillation/train.jsonl
+eval_dataset_path: data/distillation/valid.jsonl
+output_dir: runs/kd
+max_seq_length: 2048
+per_device_train_batch_size: 1
+per_device_eval_batch_size: 1
+gradient_accumulation_steps: 8
+learning_rate: 5.0e-5
+num_train_epochs: 1
+warmup_steps: 200
+weight_decay: 0.01
+logging_steps: 50
+save_steps: 500
+evaluation_strategy: steps
+pad_to_max_length: false
+add_eos: true
+bf16: true
+fp16: false
+device_map: auto
+report_to: []
+seed: 42
+lora:
+  r: 16
+  lora_alpha: 32
+  target_modules:
+    - q_proj
+    - v_proj
+  lora_dropout: 0.05
+  bias: none

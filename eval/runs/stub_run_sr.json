@@ -1,0 +1,967 @@
+{
+  "generated_at": "2025-10-07T18:26:16.369311Z",
+  "metadata": {
+    "stub": true,
+    "max_repairs": 0,
+    "self_consistency": 1,
+    "log_dir": "runs",
+    "student_config": "stub",
+    "env_student_model": null
+  },
+  "benches": [
+    {
+      "bench": "easy",
+      "total": 10,
+      "successes": 6,
+      "success_rate": 0.6,
+      "average_runtime_ms": 46.631,
+      "average_total_time_ms": 3.346,
+      "records": [
+        {
+          "name": "item_000",
+          "latex": "\\int x\\,dx",
+          "objective": "integrate",
+          "ok": true,
+          "attempts": 1,
+          "runtime_ms": 281.39,
+          "total_time_ms": 2.936,
+          "logs_path": "runs/plan_20251007T182615Z.jsonl",
+          "metrics": {
+            "execution": {
+              "total_time_ms": 2.936,
+              "tool_use_rate": 1.0,
+              "verify_success_rate": 1.0,
+              "step_count": 3,
+              "tool_count": 1,
+              "verify_count": 1
+            },
+            "verification": {
+              "ok": true,
+              "symbolic": true,
+              "numeric": true,
+              "units": "warning",
+              "details": {
+                "candidate": "x",
+                "reference": "x",
+                "symbols": [
+                  "x"
+                ],
+                "unit_status": {
+                  "status": "warning",
+                  "issues": [
+                    "symbol x treated as dimensionless"
+                  ],
+                  "dimensionality": "dimensionless",
+                  "warnings": [
+                    "symbol x treated as dimensionless"
+                  ]
+                },
+                "unit_domains": {
+                  "x": null
+                }
+              }
+            },
+            "policy": {
+              "attempt_index": 0,
+              "repair_round": 0,
+              "attempts": 1
+            }
+          }
+        },
+        {
+          "name": "item_001",
+          "latex": "\\int x^{2}\\,dx",
+          "objective": "integrate",
+          "ok": true,
+          "attempts": 1,
+          "runtime_ms": 33.789,
+          "total_time_ms": 4.922,
+          "logs_path": "runs/plan_20251007T182615Z.jsonl",
+          "metrics": {
+            "execution": {
+              "total_time_ms": 4.922,
+              "tool_use_rate": 1.0,
+              "verify_success_rate": 1.0,
+              "step_count": 3,
+              "tool_count": 1,
+              "verify_count": 1
+            },
+            "verification": {
+              "ok": true,
+              "symbolic": true,
+              "numeric": true,
+              "units": "warning",
+              "details": {
+                "candidate": "x**2",
+                "reference": "x**2",
+                "symbols": [
+                  "x"
+                ],
+                "unit_status": {
+                  "status": "warning",
+                  "issues": [
+                    "symbol x treated as dimensionless"
+                  ],
+                  "dimensionality": "dimensionless",
+                  "warnings": [
+                    "symbol x treated as dimensionless"
+                  ]
+                },
+                "unit_domains": {
+                  "x": null
+                }
+              }
+            },
+            "policy": {
+              "attempt_index": 0,
+              "repair_round": 0,
+              "attempts": 1
+            }
+          }
+        },
+        {
+          "name": "item_002",
+          "latex": "\\frac{d}{dx}\\sin x",
+          "objective": "diff",
+          "ok": true,
+          "attempts": 1,
+          "runtime_ms": 20.628,
+          "total_time_ms": 1.361,
+          "logs_path": "runs/plan_20251007T182615Z.jsonl",
+          "metrics": {
+            "execution": {
+              "total_time_ms": 1.361,
+              "tool_use_rate": 1.0,
+              "verify_success_rate": 1.0,
+              "step_count": 3,
+              "tool_count": 1,
+              "verify_count": 1
+            },
+            "verification": {
+              "ok": true,
+              "symbolic": true,
+              "numeric": true,
+              "units": "warning",
+              "details": {
+                "candidate": "cos(x)",
+                "reference": "cos(x)",
+                "symbols": [
+                  "x"
+                ],
+                "unit_status": {
+                  "status": "warning",
+                  "issues": [
+                    "symbol x treated as dimensionless"
+                  ],
+                  "dimensionality": "dimensionless",
+                  "warnings": [
+                    "symbol x treated as dimensionless"
+                  ]
+                },
+                "unit_domains": {
+                  "x": null
+                }
+              }
+            },
+            "policy": {
+              "attempt_index": 0,
+              "repair_round": 0,
+              "attempts": 1
+            }
+          }
+        },
+        {
+          "name": "item_003",
+          "latex": "\\frac{d}{dx}x^{3}",
+          "objective": "diff",
+          "ok": true,
+          "attempts": 1,
+          "runtime_ms": 13.967,
+          "total_time_ms": 3.467,
+          "logs_path": "runs/plan_20251007T182615Z.jsonl",
+          "metrics": {
+            "execution": {
+              "total_time_ms": 3.467,
+              "tool_use_rate": 1.0,
+              "verify_success_rate": 1.0,
+              "step_count": 3,
+              "tool_count": 1,
+              "verify_count": 1
+            },
+            "verification": {
+              "ok": true,
+              "symbolic": true,
+              "numeric": true,
+              "units": "warning",
+              "details": {
+                "candidate": "3*x**2",
+                "reference": "3*x**2",
+                "symbols": [
+                  "x"
+                ],
+                "unit_status": {
+                  "status": "warning",
+                  "issues": [
+                    "symbol x treated as dimensionless"
+                  ],
+                  "dimensionality": "dimensionless",
+                  "warnings": [
+                    "symbol x treated as dimensionless"
+                  ]
+                },
+                "unit_domains": {
+                  "x": null
+                }
+              }
+            },
+            "policy": {
+              "attempt_index": 0,
+              "repair_round": 0,
+              "attempts": 1
+            }
+          }
+        },
+        {
+          "name": "item_004",
+          "latex": "x+2=7",
+          "objective": "solve",
+          "ok": true,
+          "attempts": 1,
+          "runtime_ms": 6.292,
+          "total_time_ms": 0.606,
+          "logs_path": "runs/plan_20251007T182615Z.jsonl",
+          "metrics": {
+            "execution": {
+              "total_time_ms": 0.606,
+              "tool_use_rate": 1.0,
+              "verify_success_rate": 1.0,
+              "step_count": 3,
+              "tool_count": 1,
+              "verify_count": 1
+            },
+            "verification": {
+              "ok": true,
+              "symbolic": true,
+              "numeric": true,
+              "units": null,
+              "details": {
+                "solutions": [
+                  "5"
+                ],
+                "symbolic_checks": [
+                  true
+                ],
+                "numeric_checks": [
+                  true
+                ]
+              }
+            },
+            "policy": {
+              "attempt_index": 0,
+              "repair_round": 0,
+              "attempts": 1
+            }
+          }
+        },
+        {
+          "name": "item_005",
+          "latex": "x^{2}=4",
+          "objective": "solve",
+          "ok": false,
+          "attempts": 1,
+          "runtime_ms": 4.463,
+          "logs_path": "runs/plan_20251007T182615Z.jsonl",
+          "metrics": {
+            "policy": {
+              "attempt_index": 0,
+              "repair_round": 0,
+              "attempts": 1
+            },
+            "execution": {
+              "ok": false,
+              "error": "Step 1 failed: Failed to parse expression 'simplify((x**2 - 4).subs(x, S1))': ",
+              "metrics": {
+                "total_time_ms": 0.51,
+                "tool_use_rate": 1.0,
+                "verify_success_rate": 0.0,
+                "step_count": 3,
+                "tool_count": 1,
+                "verify_count": 1
+              },
+              "steps": [
+                {
+                  "index": 0,
+                  "type": "tool_call",
+                  "status": "ok",
+                  "duration_ms": 0.189,
+                  "output": {
+                    "bind": "S1",
+                    "expr": "Matrix([\n[ 2],\n[-2]])"
+                  }
+                },
+                {
+                  "index": 1,
+                  "type": "verify",
+                  "status": "error",
+                  "duration_ms": 0.313,
+                  "error": "Failed to parse expression 'simplify((x**2 - 4).subs(x, S1))': "
+                }
+              ],
+              "context": {
+                "S1": "Matrix([\n[ 2],\n[-2]])"
+              }
+            }
+          }
+        },
+        {
+          "name": "item_006",
+          "latex": "\\int (x^{2}+x)\\,dx",
+          "objective": "integrate",
+          "ok": true,
+          "attempts": 1,
+          "runtime_ms": 33.506,
+          "total_time_ms": 6.783,
+          "logs_path": "runs/plan_20251007T182615Z.jsonl",
+          "metrics": {
+            "execution": {
+              "total_time_ms": 6.783,
+              "tool_use_rate": 1.0,
+              "verify_success_rate": 1.0,
+              "step_count": 3,
+              "tool_count": 1,
+              "verify_count": 1
+            },
+            "verification": {
+              "ok": true,
+              "symbolic": true,
+              "numeric": true,
+              "units": "warning",
+              "details": {
+                "candidate": "x**2 + x",
+                "reference": "x**2 + x",
+                "symbols": [
+                  "x"
+                ],
+                "unit_status": {
+                  "status": "warning",
+                  "issues": [
+                    "symbol x treated as dimensionless"
+                  ],
+                  "dimensionality": "dimensionless",
+                  "warnings": [
+                    "symbol x treated as dimensionless"
+                  ]
+                },
+                "unit_domains": {
+                  "x": null
+                }
+              }
+            },
+            "policy": {
+              "attempt_index": 0,
+              "repair_round": 0,
+              "attempts": 1
+            }
+          }
+        },
+        {
+          "name": "item_007",
+          "latex": "\\frac{d}{dx}(x^{2}+e^{x})",
+          "objective": "diff",
+          "ok": false,
+          "attempts": 1,
+          "runtime_ms": 45.728,
+          "logs_path": "runs/plan_20251007T182615Z.jsonl",
+          "metrics": {
+            "policy": {
+              "attempt_index": 0,
+              "repair_round": 0,
+              "attempts": 1
+            },
+            "execution": {
+              "ok": false,
+              "error": "Verify failed at step 1",
+              "metrics": {
+                "total_time_ms": 25.494,
+                "tool_use_rate": 1.0,
+                "verify_success_rate": 0.0,
+                "step_count": 3,
+                "tool_count": 1,
+                "verify_count": 1
+              },
+              "steps": [
+                {
+                  "index": 0,
+                  "type": "tool_call",
+                  "status": "ok",
+                  "duration_ms": 0.606,
+                  "output": {
+                    "bind": "D1",
+                    "expr": "2*x + exp(x)"
+                  }
+                },
+                {
+                  "index": 1,
+                  "type": "verify",
+                  "status": "fail",
+                  "duration_ms": 24.88,
+                  "verify_flag": false
+                }
+              ],
+              "context": {
+                "D1": "2*x + exp(x)"
+              }
+            }
+          }
+        },
+        {
+          "name": "item_008",
+          "latex": "\\int e^{x}\\,dx",
+          "objective": "integrate",
+          "ok": false,
+          "attempts": 1,
+          "runtime_ms": 17.483,
+          "logs_path": "runs/plan_20251007T182615Z.jsonl",
+          "metrics": {
+            "policy": {
+              "attempt_index": 0,
+              "repair_round": 0,
+              "attempts": 1
+            },
+            "execution": {
+              "ok": true,
+              "error": null,
+              "metrics": {
+                "total_time_ms": 3.637,
+                "tool_use_rate": 1.0,
+                "verify_success_rate": 1.0,
+                "step_count": 3,
+                "tool_count": 1,
+                "verify_count": 1
+              },
+              "steps": [
+                {
+                  "index": 0,
+                  "type": "tool_call",
+                  "status": "ok",
+                  "duration_ms": 0.402,
+                  "output": {
+                    "bind": "I1",
+                    "expr": "exp(x)"
+                  }
+                },
+                {
+                  "index": 1,
+                  "type": "verify",
+                  "status": "ok",
+                  "duration_ms": 3.197,
+                  "verify_flag": true
+                },
+                {
+                  "index": 2,
+                  "type": "final",
+                  "status": "ok",
+                  "duration_ms": 0.001,
+                  "output": "I1"
+                }
+              ],
+              "context": {
+                "I1": "exp(x)"
+              }
+            }
+          }
+        },
+        {
+          "name": "item_009",
+          "latex": "x^{2}+x-6=0",
+          "objective": "solve",
+          "ok": false,
+          "attempts": 1,
+          "runtime_ms": 9.062,
+          "logs_path": "runs/plan_20251007T182615Z.jsonl",
+          "metrics": {
+            "policy": {
+              "attempt_index": 0,
+              "repair_round": 0,
+              "attempts": 1
+            },
+            "execution": {
+              "ok": false,
+              "error": "Step 1 failed: Failed to parse expression 'simplify(((x**2 + x) - 6).subs(x, S1))': ",
+              "metrics": {
+                "total_time_ms": 0.606,
+                "tool_use_rate": 1.0,
+                "verify_success_rate": 0.0,
+                "step_count": 3,
+                "tool_count": 1,
+                "verify_count": 1
+              },
+              "steps": [
+                {
+                  "index": 0,
+                  "type": "tool_call",
+                  "status": "ok",
+                  "duration_ms": 0.185,
+                  "output": {
+                    "bind": "S1",
+                    "expr": "Matrix([\n[ 2],\n[-3]])"
+                  }
+                },
+                {
+                  "index": 1,
+                  "type": "verify",
+                  "status": "error",
+                  "duration_ms": 0.414,
+                  "error": "Failed to parse expression 'simplify(((x**2 + x) - 6).subs(x, S1))': "
+                }
+              ],
+              "context": {
+                "S1": "Matrix([\n[ 2],\n[-3]])"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "bench": "hard",
+      "total": 10,
+      "successes": 2,
+      "success_rate": 0.2,
+      "average_runtime_ms": 38.197,
+      "average_total_time_ms": 29.991,
+      "records": [
+        {
+          "name": "item_000",
+          "latex": "\\int x^{2}\\sin x\\,dx",
+          "objective": "integrate",
+          "ok": false,
+          "attempts": 1,
+          "runtime_ms": 25.748,
+          "logs_path": "runs/plan_20251007T182616Z.jsonl",
+          "metrics": {
+            "policy": {
+              "attempt_index": 0,
+              "repair_round": 0,
+              "attempts": 1
+            },
+            "execution": {
+              "ok": false,
+              "error": "Step 0 failed: Unsupported integrand",
+              "metrics": {
+                "total_time_ms": 0.072,
+                "tool_use_rate": 0.0,
+                "verify_success_rate": 0.0,
+                "step_count": 3,
+                "tool_count": 1,
+                "verify_count": 0
+              },
+              "steps": [
+                {
+                  "index": 0,
+                  "type": "tool_call",
+                  "status": "error",
+                  "duration_ms": 0.069,
+                  "error": "Unsupported integrand"
+                }
+              ],
+              "context": {}
+            }
+          }
+        },
+        {
+          "name": "item_001",
+          "latex": "\\frac{d}{dx}(x^{2}\\cos x)",
+          "objective": "diff",
+          "ok": true,
+          "attempts": 1,
+          "runtime_ms": 96.149,
+          "total_time_ms": 46.875,
+          "logs_path": "runs/plan_20251007T182616Z.jsonl",
+          "metrics": {
+            "execution": {
+              "total_time_ms": 46.875,
+              "tool_use_rate": 1.0,
+              "verify_success_rate": 1.0,
+              "step_count": 3,
+              "tool_count": 1,
+              "verify_count": 1
+            },
+            "verification": {
+              "ok": true,
+              "symbolic": true,
+              "numeric": true,
+              "units": "warning",
+              "details": {
+                "candidate": "-x**2*sin(x) + 2*x*cos(x)",
+                "reference": "-x**2*sin(x) + 2*x*cos(x)",
+                "symbols": [
+                  "x"
+                ],
+                "unit_status": {
+                  "status": "warning",
+                  "issues": [
+                    "symbol x treated as dimensionless"
+                  ],
+                  "dimensionality": "dimensionless",
+                  "warnings": [
+                    "symbol x treated as dimensionless"
+                  ]
+                },
+                "unit_domains": {
+                  "x": null
+                }
+              }
+            },
+            "policy": {
+              "attempt_index": 0,
+              "repair_round": 0,
+              "attempts": 1
+            }
+          }
+        },
+        {
+          "name": "item_002",
+          "latex": "x\\sin x = 1",
+          "objective": "solve",
+          "ok": false,
+          "attempts": 1,
+          "runtime_ms": 9.905,
+          "logs_path": "runs/plan_20251007T182616Z.jsonl",
+          "metrics": {
+            "policy": {
+              "attempt_index": 0,
+              "repair_round": 0,
+              "attempts": 1
+            },
+            "execution": {
+              "ok": false,
+              "error": "Step 0 failed: Not a Polynomial",
+              "metrics": {
+                "total_time_ms": 0.106,
+                "tool_use_rate": 0.0,
+                "verify_success_rate": 0.0,
+                "step_count": 3,
+                "tool_count": 1,
+                "verify_count": 0
+              },
+              "steps": [
+                {
+                  "index": 0,
+                  "type": "tool_call",
+                  "status": "error",
+                  "duration_ms": 0.103,
+                  "error": "Not a Polynomial"
+                }
+              ],
+              "context": {}
+            }
+          }
+        },
+        {
+          "name": "item_003",
+          "latex": "\\int e^{x}\\cos x\\,dx",
+          "objective": "integrate",
+          "ok": false,
+          "attempts": 1,
+          "runtime_ms": 19.111,
+          "logs_path": "runs/plan_20251007T182616Z.jsonl",
+          "metrics": {
+            "policy": {
+              "attempt_index": 0,
+              "repair_round": 0,
+              "attempts": 1
+            },
+            "execution": {
+              "ok": false,
+              "error": "Step 0 failed: Unsupported integrand",
+              "metrics": {
+                "total_time_ms": 0.052,
+                "tool_use_rate": 0.0,
+                "verify_success_rate": 0.0,
+                "step_count": 3,
+                "tool_count": 1,
+                "verify_count": 0
+              },
+              "steps": [
+                {
+                  "index": 0,
+                  "type": "tool_call",
+                  "status": "error",
+                  "duration_ms": 0.049,
+                  "error": "Unsupported integrand"
+                }
+              ],
+              "context": {}
+            }
+          }
+        },
+        {
+          "name": "item_004",
+          "latex": "\\frac{d}{dx}(e^{x}\\sin x)",
+          "objective": "diff",
+          "ok": false,
+          "attempts": 1,
+          "runtime_ms": 122.612,
+          "logs_path": "runs/plan_20251007T182616Z.jsonl",
+          "metrics": {
+            "policy": {
+              "attempt_index": 0,
+              "repair_round": 0,
+              "attempts": 1
+            },
+            "execution": {
+              "ok": false,
+              "error": "Verify failed at step 1",
+              "metrics": {
+                "total_time_ms": 110.148,
+                "tool_use_rate": 1.0,
+                "verify_success_rate": 0.0,
+                "step_count": 3,
+                "tool_count": 1,
+                "verify_count": 1
+              },
+              "steps": [
+                {
+                  "index": 0,
+                  "type": "tool_call",
+                  "status": "ok",
+                  "duration_ms": 0.739,
+                  "output": {
+                    "bind": "D1",
+                    "expr": "exp(x)*sin(x) + exp(x)*cos(x)"
+                  }
+                },
+                {
+                  "index": 1,
+                  "type": "verify",
+                  "status": "fail",
+                  "duration_ms": 109.401,
+                  "verify_flag": false
+                }
+              ],
+              "context": {
+                "D1": "exp(x)*sin(x) + exp(x)*cos(x)"
+              }
+            }
+          }
+        },
+        {
+          "name": "item_005",
+          "latex": "\\int \\frac{1}{x^{2}+1}\\,dx",
+          "objective": "integrate",
+          "ok": false,
+          "attempts": 1,
+          "runtime_ms": 21.444,
+          "logs_path": "runs/plan_20251007T182616Z.jsonl",
+          "metrics": {
+            "policy": {
+              "attempt_index": 0,
+              "repair_round": 0,
+              "attempts": 1
+            },
+            "execution": {
+              "ok": false,
+              "error": "Step 0 failed: Unsupported integrand",
+              "metrics": {
+                "total_time_ms": 0.065,
+                "tool_use_rate": 0.0,
+                "verify_success_rate": 0.0,
+                "step_count": 3,
+                "tool_count": 1,
+                "verify_count": 0
+              },
+              "steps": [
+                {
+                  "index": 0,
+                  "type": "tool_call",
+                  "status": "error",
+                  "duration_ms": 0.062,
+                  "error": "Unsupported integrand"
+                }
+              ],
+              "context": {}
+            }
+          }
+        },
+        {
+          "name": "item_006",
+          "latex": "x^{3} - x = 0",
+          "objective": "solve",
+          "ok": false,
+          "attempts": 1,
+          "runtime_ms": 6.016,
+          "logs_path": "runs/plan_20251007T182616Z.jsonl",
+          "metrics": {
+            "policy": {
+              "attempt_index": 0,
+              "repair_round": 0,
+              "attempts": 1
+            },
+            "execution": {
+              "ok": false,
+              "error": "Step 1 failed: Failed to parse expression 'simplify((x**3 - x).subs(x, S1))': ",
+              "metrics": {
+                "total_time_ms": 0.504,
+                "tool_use_rate": 1.0,
+                "verify_success_rate": 0.0,
+                "step_count": 3,
+                "tool_count": 1,
+                "verify_count": 1
+              },
+              "steps": [
+                {
+                  "index": 0,
+                  "type": "tool_call",
+                  "status": "ok",
+                  "duration_ms": 0.195,
+                  "output": {
+                    "bind": "S1",
+                    "expr": "Matrix([\n[ 0],\n[ 1],\n[-1]])"
+                  }
+                },
+                {
+                  "index": 1,
+                  "type": "verify",
+                  "status": "error",
+                  "duration_ms": 0.304,
+                  "error": "Failed to parse expression 'simplify((x**3 - x).subs(x, S1))': "
+                }
+              ],
+              "context": {
+                "S1": "Matrix([\n[ 0],\n[ 1],\n[-1]])"
+              }
+            }
+          }
+        },
+        {
+          "name": "item_007",
+          "latex": "\\frac{d}{dx}(\\sin(x^{2}))",
+          "objective": "diff",
+          "ok": true,
+          "attempts": 1,
+          "runtime_ms": 50.141,
+          "total_time_ms": 13.106,
+          "logs_path": "runs/plan_20251007T182616Z.jsonl",
+          "metrics": {
+            "execution": {
+              "total_time_ms": 13.106,
+              "tool_use_rate": 1.0,
+              "verify_success_rate": 1.0,
+              "step_count": 3,
+              "tool_count": 1,
+              "verify_count": 1
+            },
+            "verification": {
+              "ok": true,
+              "symbolic": true,
+              "numeric": true,
+              "units": "warning",
+              "details": {
+                "candidate": "2*x*cos(x**2)",
+                "reference": "2*x*cos(x**2)",
+                "symbols": [
+                  "x"
+                ],
+                "unit_status": {
+                  "status": "warning",
+                  "issues": [
+                    "symbol x treated as dimensionless"
+                  ],
+                  "dimensionality": "dimensionless",
+                  "warnings": [
+                    "symbol x treated as dimensionless"
+                  ]
+                },
+                "unit_domains": {
+                  "x": null
+                }
+              }
+            },
+            "policy": {
+              "attempt_index": 0,
+              "repair_round": 0,
+              "attempts": 1
+            }
+          }
+        },
+        {
+          "name": "item_008",
+          "latex": "\\int x e^{x^{2}}\\,dx",
+          "objective": "integrate",
+          "ok": false,
+          "attempts": 1,
+          "runtime_ms": 26.116,
+          "logs_path": "runs/plan_20251007T182616Z.jsonl",
+          "metrics": {
+            "policy": {
+              "attempt_index": 0,
+              "repair_round": 0,
+              "attempts": 1
+            },
+            "execution": {
+              "ok": false,
+              "error": "Step 0 failed: Unsupported integrand",
+              "metrics": {
+                "total_time_ms": 0.053,
+                "tool_use_rate": 0.0,
+                "verify_success_rate": 0.0,
+                "step_count": 3,
+                "tool_count": 1,
+                "verify_count": 0
+              },
+              "steps": [
+                {
+                  "index": 0,
+                  "type": "tool_call",
+                  "status": "error",
+                  "duration_ms": 0.049,
+                  "error": "Unsupported integrand"
+                }
+              ],
+              "context": {}
+            }
+          }
+        },
+        {
+          "name": "item_009",
+          "latex": "\\cos x = x",
+          "objective": "solve",
+          "ok": false,
+          "attempts": 1,
+          "runtime_ms": 4.728,
+          "logs_path": "runs/plan_20251007T182616Z.jsonl",
+          "metrics": {
+            "policy": {
+              "attempt_index": 0,
+              "repair_round": 0,
+              "attempts": 1
+            },
+            "execution": {
+              "ok": false,
+              "error": "Step 0 failed: Not a Polynomial",
+              "metrics": {
+                "total_time_ms": 0.067,
+                "tool_use_rate": 0.0,
+                "verify_success_rate": 0.0,
+                "step_count": 3,
+                "tool_count": 1,
+                "verify_count": 0
+              },
+              "steps": [
+                {
+                  "index": 0,
+                  "type": "tool_call",
+                  "status": "error",
+                  "duration_ms": 0.064,
+                  "error": "Not a Polynomial"
+                }
+              ],
+              "context": {}
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

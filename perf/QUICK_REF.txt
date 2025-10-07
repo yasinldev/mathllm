@@ -1,0 +1,53 @@
+MATHLLM PERFORMANCE SPRINT - QUICK REFERENCE
+
+MODEL: nvidia/OpenMath-Nemotron-7B
+GPU: RTX 5070 12GB VRAM
+
+PHASE SUMMARY
+A: Baseline         smoke_test.py           p95 ≤1300ms
+B: KV Tuning        phase_b_tuning.py       p95 ≤1600ms batch
+C: Speculative      phase_c_speculative.py  ≥20% speedup
+D: Talker           phase_d_talker.py       p95 ≤900-1200ms
+E: Telemetry        phase_e_telemetry.py    15min OOM=0
+F: Cache            phase_f_cache.py        hit≥30% p95≤600ms
+G: Report           perf.md                 Final documentation
+
+CONFIGURATION KNOBS
+STUDENT_MAX_NUM_SEQS        8→10→12     Phase B tuning
+STUDENT_GPU_MEMORY_UTIL     0.85        Fixed
+STUDENT_MAX_MODEL_LEN       4096        Fixed
+STUDENT_SWAP_SPACE          8           OOM prevention
+SPECULATIVE_ENABLED         true/false  Phase C decision
+TALKER_MODE                 vllm/cpp    Phase D choice
+TALKER_NGL                  10-24       GPU layers (cpp only)
+
+CRITICAL METRICS
+p50/p90/p95/p99    Latency percentiles
+OOM count          Must be 0
+Throughput         Requests per second
+Cache hit rate     Target ≥30%
+Success rate       Target ≥95%
+
+WORKFLOW
+1. Setup:          bash setup.sh
+2. Start Student:  ./start_student.sh
+3. Healthcheck:    python3 healthcheck.py http://localhost:8009/v1
+4. Run Phase:      python3 run_phases.py <A-F>
+5. Fill Report:    Edit perf.md with results
+
+TROUBLESHOOTING
+OOM errors         Reduce max-num-seqs or max-model-len
+High p95           Reduce batch size or enable swap-space
+Low throughput     Increase max-num-seqs (watch OOM)
+Cache misses       Check problem hash consistency
+
+FILES (17 total)
+Config:       .env.example
+Setup:        setup.sh
+Servers:      start_student.sh, start_talker.sh
+Utils:        healthcheck.py, benchmark.py
+Tests:        smoke_test.py, phase_[b-f]_*.py
+Docs:         README.md, perf.md, SPRINT_STATUS.txt
+Helper:       run_phases.py, commands.sh
+
+NO COMMENTS. PURE ENGLISH. READY TO EXECUTE.

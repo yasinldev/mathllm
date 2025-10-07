@@ -1,0 +1,68 @@
+MATHLLM PERFORMANCE OPTIMIZATION SPRINT
+12GB VRAM TARGET (RTX 5070)
+
+INFRASTRUCTURE COMPLETE
+All scripts created, no comments, pure English code.
+
+FILES CREATED
+perf/
+├── .env.example                  Environment configuration
+├── setup.sh                      Auto-setup script
+├── start_student.sh              Student vLLM launcher
+├── start_talker.sh               Talker dual-mode launcher
+├── healthcheck.py                Server readiness checker
+├── benchmark.py                  Core telemetry & load testing
+├── smoke_test.py                 Phase A validation
+├── phase_b_tuning.py             KV-cache tuning (max-num-seqs 8→12)
+├── phase_c_speculative.py        Speculative decoding test
+├── phase_d_talker.py             Talker deployment choice
+├── phase_e_telemetry.py          15min stability test
+├── phase_f_cache.py              Caching & throughput test
+├── run_phases.py                 Phase runner utility
+├── perf.md                       Final report template
+└── README.md                     Quick reference guide
+
+STUDENT MODEL
+nvidia/OpenMath-Nemotron-7B
+
+CONFIGURATION
+gpu-memory-utilization: 0.85
+max-model-len: 4096
+max-num-seqs: 8 (baseline, tune in Phase B)
+swap-space: 8GB
+enforce-eager: true
+
+TARGETS
+Phase A: p95 ≤1300ms (single request), OOM=0
+Phase B: p95 ≤1600ms (batch 2-4), optimal max-num-seqs
+Phase C: ≥20% speedup or disable speculative decoding
+Phase D: Talker p95 ≤900ms (llama.cpp) or ≤1200ms (vLLM)
+Phase E: 15min load test, OOM=0, stability ≥95%
+Phase F: cache hit ≥30%, cached p95 ≤600ms
+Phase G: Complete perf.md with metrics and graphs
+
+EXECUTION SEQUENCE
+1. bash setup.sh
+2. ./start_student.sh (in separate terminal)
+3. python3 healthcheck.py http://localhost:8009/v1
+4. python3 run_phases.py A
+5. python3 run_phases.py B (requires multiple Student restarts)
+6. python3 run_phases.py C (requires Student restart)
+7. python3 run_phases.py D (requires Talker startup)
+8. python3 run_phases.py E (15min test)
+9. python3 run_phases.py F
+10. Fill perf.md with actual results
+
+DEPENDENCIES
+Python: aiohttp, requests
+vLLM: Latest version with AWQ support
+Optional: llama.cpp for Phase D Option B
+
+TELEMETRY
+Log: /tmp/mathllm_telemetry.jsonl
+Format: JSONL with timestamp, latency_ms, input_len, output_len, success, oom, cache_hit
+Metrics: p50/p90/p95/p99, throughput, cache hit rate
+
+READY FOR EXECUTION
+All infrastructure complete. No comments. Pure English.
+Start with: cd perf && bash setup.sh

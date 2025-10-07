@@ -1,0 +1,507 @@
+{
+  "generated_at": "2025-10-07T18:22:59.838938Z",
+  "metadata": {
+    "stub": true,
+    "max_repairs": 2,
+    "self_consistency": 3,
+    "log_dir": "runs",
+    "student_config": "stub",
+    "env_student_model": null
+  },
+  "benches": [
+    {
+      "bench": "easy",
+      "total": 10,
+      "successes": 5,
+      "success_rate": 0.5,
+      "average_runtime_ms": 46.84,
+      "average_total_time_ms": 3.829,
+      "records": [
+        {
+          "name": "item_000",
+          "latex": "\\int x\\,dx",
+          "objective": "integrate",
+          "ok": true,
+          "attempts": 1,
+          "runtime_ms": 290.394,
+          "total_time_ms": 2.901,
+          "logs_path": "runs/plan_20251007T182259Z.jsonl",
+          "metrics": {
+            "execution": {
+              "total_time_ms": 2.901,
+              "tool_use_rate": 1.0,
+              "verify_success_rate": 1.0,
+              "step_count": 3,
+              "tool_count": 1,
+              "verify_count": 1
+            },
+            "verification": {
+              "ok": true,
+              "symbolic": true,
+              "numeric": true,
+              "units": "warning",
+              "details": {
+                "candidate": "x",
+                "reference": "x",
+                "symbols": [
+                  "x"
+                ],
+                "unit_status": {
+                  "status": "warning",
+                  "issues": [
+                    "symbol x treated as dimensionless"
+                  ],
+                  "dimensionality": "dimensionless",
+                  "warnings": [
+                    "symbol x treated as dimensionless"
+                  ]
+                },
+                "unit_domains": {
+                  "x": null
+                }
+              }
+            },
+            "policy": {
+              "attempt_index": 0,
+              "repair_round": 0,
+              "attempts": 1
+            }
+          }
+        },
+        {
+          "name": "item_001",
+          "latex": "\\int x^{2}\\,dx",
+          "objective": "integrate",
+          "ok": true,
+          "attempts": 1,
+          "runtime_ms": 33.588,
+          "total_time_ms": 4.878,
+          "logs_path": "runs/plan_20251007T182259Z.jsonl",
+          "metrics": {
+            "execution": {
+              "total_time_ms": 4.878,
+              "tool_use_rate": 1.0,
+              "verify_success_rate": 1.0,
+              "step_count": 3,
+              "tool_count": 1,
+              "verify_count": 1
+            },
+            "verification": {
+              "ok": true,
+              "symbolic": true,
+              "numeric": true,
+              "units": "warning",
+              "details": {
+                "candidate": "x**2",
+                "reference": "x**2",
+                "symbols": [
+                  "x"
+                ],
+                "unit_status": {
+                  "status": "warning",
+                  "issues": [
+                    "symbol x treated as dimensionless"
+                  ],
+                  "dimensionality": "dimensionless",
+                  "warnings": [
+                    "symbol x treated as dimensionless"
+                  ]
+                },
+                "unit_domains": {
+                  "x": null
+                }
+              }
+            },
+            "policy": {
+              "attempt_index": 0,
+              "repair_round": 0,
+              "attempts": 1
+            }
+          }
+        },
+        {
+          "name": "item_002",
+          "latex": "\\frac{d}{dx}\\sin x",
+          "objective": "diff",
+          "ok": true,
+          "attempts": 1,
+          "runtime_ms": 20.194,
+          "total_time_ms": 1.206,
+          "logs_path": "runs/plan_20251007T182259Z.jsonl",
+          "metrics": {
+            "execution": {
+              "total_time_ms": 1.206,
+              "tool_use_rate": 1.0,
+              "verify_success_rate": 1.0,
+              "step_count": 3,
+              "tool_count": 1,
+              "verify_count": 1
+            },
+            "verification": {
+              "ok": true,
+              "symbolic": true,
+              "numeric": true,
+              "units": "warning",
+              "details": {
+                "candidate": "cos(x)",
+                "reference": "cos(x)",
+                "symbols": [
+                  "x"
+                ],
+                "unit_status": {
+                  "status": "warning",
+                  "issues": [
+                    "symbol x treated as dimensionless"
+                  ],
+                  "dimensionality": "dimensionless",
+                  "warnings": [
+                    "symbol x treated as dimensionless"
+                  ]
+                },
+                "unit_domains": {
+                  "x": null
+                }
+              }
+            },
+            "policy": {
+              "attempt_index": 0,
+              "repair_round": 0,
+              "attempts": 1
+            }
+          }
+        },
+        {
+          "name": "item_003",
+          "latex": "\\frac{d}{dx}x^{3}",
+          "objective": "diff",
+          "ok": true,
+          "attempts": 1,
+          "runtime_ms": 13.971,
+          "total_time_ms": 3.314,
+          "logs_path": "runs/plan_20251007T182259Z.jsonl",
+          "metrics": {
+            "execution": {
+              "total_time_ms": 3.314,
+              "tool_use_rate": 1.0,
+              "verify_success_rate": 1.0,
+              "step_count": 3,
+              "tool_count": 1,
+              "verify_count": 1
+            },
+            "verification": {
+              "ok": true,
+              "symbolic": true,
+              "numeric": true,
+              "units": "warning",
+              "details": {
+                "candidate": "3*x**2",
+                "reference": "3*x**2",
+                "symbols": [
+                  "x"
+                ],
+                "unit_status": {
+                  "status": "warning",
+                  "issues": [
+                    "symbol x treated as dimensionless"
+                  ],
+                  "dimensionality": "dimensionless",
+                  "warnings": [
+                    "symbol x treated as dimensionless"
+                  ]
+                },
+                "unit_domains": {
+                  "x": null
+                }
+              }
+            },
+            "policy": {
+              "attempt_index": 0,
+              "repair_round": 0,
+              "attempts": 1
+            }
+          }
+        },
+        {
+          "name": "item_004",
+          "latex": "x+2=7",
+          "objective": "solve",
+          "ok": false,
+          "attempts": 0,
+          "runtime_ms": 5.986,
+          "error": "'Integer' object has no attribute 'is_List'"
+        },
+        {
+          "name": "item_005",
+          "latex": "x^{2}=4",
+          "objective": "solve",
+          "ok": false,
+          "attempts": 0,
+          "runtime_ms": 4.19,
+          "error": "Stub planner missing MIR summary"
+        },
+        {
+          "name": "item_006",
+          "latex": "\\int (x^{2}+x)\\,dx",
+          "objective": "integrate",
+          "ok": true,
+          "attempts": 1,
+          "runtime_ms": 30.786,
+          "total_time_ms": 6.847,
+          "logs_path": "runs/plan_20251007T182259Z.jsonl",
+          "metrics": {
+            "execution": {
+              "total_time_ms": 6.847,
+              "tool_use_rate": 1.0,
+              "verify_success_rate": 1.0,
+              "step_count": 3,
+              "tool_count": 1,
+              "verify_count": 1
+            },
+            "verification": {
+              "ok": true,
+              "symbolic": true,
+              "numeric": true,
+              "units": "warning",
+              "details": {
+                "candidate": "x**2 + x",
+                "reference": "x**2 + x",
+                "symbols": [
+                  "x"
+                ],
+                "unit_status": {
+                  "status": "warning",
+                  "issues": [
+                    "symbol x treated as dimensionless"
+                  ],
+                  "dimensionality": "dimensionless",
+                  "warnings": [
+                    "symbol x treated as dimensionless"
+                  ]
+                },
+                "unit_domains": {
+                  "x": null
+                }
+              }
+            },
+            "policy": {
+              "attempt_index": 0,
+              "repair_round": 0,
+              "attempts": 1
+            }
+          }
+        },
+        {
+          "name": "item_007",
+          "latex": "\\frac{d}{dx}(x^{2}+e^{x})",
+          "objective": "diff",
+          "ok": false,
+          "attempts": 0,
+          "runtime_ms": 44.664,
+          "error": "Stub planner missing MIR summary"
+        },
+        {
+          "name": "item_008",
+          "latex": "\\int e^{x}\\,dx",
+          "objective": "integrate",
+          "ok": false,
+          "attempts": 0,
+          "runtime_ms": 16.31,
+          "error": "Stub planner missing MIR summary"
+        },
+        {
+          "name": "item_009",
+          "latex": "x^{2}+x-6=0",
+          "objective": "solve",
+          "ok": false,
+          "attempts": 0,
+          "runtime_ms": 8.316,
+          "error": "Stub planner missing MIR summary"
+        }
+      ]
+    },
+    {
+      "bench": "hard",
+      "total": 10,
+      "successes": 2,
+      "success_rate": 0.2,
+      "average_runtime_ms": 38.597,
+      "average_total_time_ms": 29.988,
+      "records": [
+        {
+          "name": "item_000",
+          "latex": "\\int x^{2}\\sin x\\,dx",
+          "objective": "integrate",
+          "ok": false,
+          "attempts": 0,
+          "runtime_ms": 24.306,
+          "error": "Stub planner missing MIR summary"
+        },
+        {
+          "name": "item_001",
+          "latex": "\\frac{d}{dx}(x^{2}\\cos x)",
+          "objective": "diff",
+          "ok": true,
+          "attempts": 1,
+          "runtime_ms": 95.855,
+          "total_time_ms": 46.717,
+          "logs_path": "runs/plan_20251007T182259Z.jsonl",
+          "metrics": {
+            "execution": {
+              "total_time_ms": 46.717,
+              "tool_use_rate": 1.0,
+              "verify_success_rate": 1.0,
+              "step_count": 3,
+              "tool_count": 1,
+              "verify_count": 1
+            },
+            "verification": {
+              "ok": true,
+              "symbolic": true,
+              "numeric": true,
+              "units": "warning",
+              "details": {
+                "candidate": "-x**2*sin(x) + 2*x*cos(x)",
+                "reference": "-x**2*sin(x) + 2*x*cos(x)",
+                "symbols": [
+                  "x"
+                ],
+                "unit_status": {
+                  "status": "warning",
+                  "issues": [
+                    "symbol x treated as dimensionless"
+                  ],
+                  "dimensionality": "dimensionless",
+                  "warnings": [
+                    "symbol x treated as dimensionless"
+                  ]
+                },
+                "unit_domains": {
+                  "x": null
+                }
+              }
+            },
+            "policy": {
+              "attempt_index": 0,
+              "repair_round": 0,
+              "attempts": 1
+            }
+          }
+        },
+        {
+          "name": "item_002",
+          "latex": "x\\sin x = 1",
+          "objective": "solve",
+          "ok": false,
+          "attempts": 0,
+          "runtime_ms": 9.398,
+          "error": "Stub planner missing MIR summary"
+        },
+        {
+          "name": "item_003",
+          "latex": "\\int e^{x}\\cos x\\,dx",
+          "objective": "integrate",
+          "ok": false,
+          "attempts": 0,
+          "runtime_ms": 19.348,
+          "error": "Stub planner missing MIR summary"
+        },
+        {
+          "name": "item_004",
+          "latex": "\\frac{d}{dx}(e^{x}\\sin x)",
+          "objective": "diff",
+          "ok": false,
+          "attempts": 0,
+          "runtime_ms": 125.835,
+          "error": "Stub planner missing MIR summary"
+        },
+        {
+          "name": "item_005",
+          "latex": "\\int \\frac{1}{x^{2}+1}\\,dx",
+          "objective": "integrate",
+          "ok": false,
+          "attempts": 0,
+          "runtime_ms": 21.471,
+          "error": "Stub planner missing MIR summary"
+        },
+        {
+          "name": "item_006",
+          "latex": "x^{3} - x = 0",
+          "objective": "solve",
+          "ok": false,
+          "attempts": 0,
+          "runtime_ms": 5.697,
+          "error": "Stub planner missing MIR summary"
+        },
+        {
+          "name": "item_007",
+          "latex": "\\frac{d}{dx}(\\sin(x^{2}))",
+          "objective": "diff",
+          "ok": true,
+          "attempts": 1,
+          "runtime_ms": 52.288,
+          "total_time_ms": 13.259,
+          "logs_path": "runs/plan_20251007T182259Z.jsonl",
+          "metrics": {
+            "execution": {
+              "total_time_ms": 13.259,
+              "tool_use_rate": 1.0,
+              "verify_success_rate": 1.0,
+              "step_count": 3,
+              "tool_count": 1,
+              "verify_count": 1
+            },
+            "verification": {
+              "ok": true,
+              "symbolic": true,
+              "numeric": true,
+              "units": "warning",
+              "details": {
+                "candidate": "2*x*cos(x**2)",
+                "reference": "2*x*cos(x**2)",
+                "symbols": [
+                  "x"
+                ],
+                "unit_status": {
+                  "status": "warning",
+                  "issues": [
+                    "symbol x treated as dimensionless"
+                  ],
+                  "dimensionality": "dimensionless",
+                  "warnings": [
+                    "symbol x treated as dimensionless"
+                  ]
+                },
+                "unit_domains": {
+                  "x": null
+                }
+              }
+            },
+            "policy": {
+              "attempt_index": 0,
+              "repair_round": 0,
+              "attempts": 1
+            }
+          }
+        },
+        {
+          "name": "item_008",
+          "latex": "\\int x e^{x^{2}}\\,dx",
+          "objective": "integrate",
+          "ok": false,
+          "attempts": 0,
+          "runtime_ms": 26.946,
+          "error": "Stub planner missing MIR summary"
+        },
+        {
+          "name": "item_009",
+          "latex": "\\cos x = x",
+          "objective": "solve",
+          "ok": false,
+          "attempts": 0,
+          "runtime_ms": 4.825,
+          "error": "Stub planner missing MIR summary"
+        }
+      ]
+    }
+  ]
+}
