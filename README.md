@@ -1,6 +1,6 @@
 # MathLLM
 
-> Production-grade symbolic mathematics system with C++20 core, LLM-powered reasoning, and 12GB VRAM-optimized inference
+> symbolic mathematics system with C++20 core, LLM-powered reasoning, and 12GB VRAM-optimized inference
 
 [![Build Status](https://img.shields.io/badge/build-passing-brightgreen)]()
 [![C++ Standard](https://img.shields.io/badge/C++-20-blue)]()
