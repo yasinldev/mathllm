@@ -17,30 +17,30 @@ MathLLM is an advanced mathematical reasoning system that combines:
 
 ### Key Features
 
-🔬 **Symbolic Calculus Engine**
+**Symbolic Calculus Engine**
 - Integration, differentiation, equation solving
 - Multi-step reasoning with verifiable intermediate steps
 - Sub-10µs C++ core operations
 
-🧠 **LLM-Powered Reasoning**
+**LLM-Powered Reasoning**
 - Student model: nvidia/OpenMath-Nemotron-7B (7B parameters)
 - Teacher fallback with rate limiting
 - Self-consistency ensemble (3 attempts default)
 - Plan repair with symbolic verification
 
-⚡ **Performance Optimized**
+**Performance Optimized**
 - vLLM inference server (GPU memory utilization: 85%)
 - KV-cache tuning (max-num-seqs: 8→12)
 - Speculative decoding with TinyLlama draft
 - Result caching (SHA256-based, 30%+ hit rate)
 
-🔧 **Engineering Mode**
+**Engineering Mode**
 - Unit dimension analysis (Pint integration)
 - NumPy/Octave/MATLAB/C code generation
 - Numeric sampling with domain constraints
 - Gradio web interface
 
-📊 **Training & Evaluation**
+**Training & Evaluation**
 - Knowledge Distillation (KD) pipeline
 - Direct Preference Optimization (DPO)
 - Preference dataset generation from policy logs
@@ -146,31 +146,31 @@ python3 python/ui/app.py
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│                     MathLLM System                           │
+│                     MathLLM System                          │
 ├─────────────────────────────────────────────────────────────┤
-│  Frontend Layer                                              │
+│  Frontend Layer                                             │
 │  ├─ Gradio UI (python/ui/app.py)                            │
 │  └─ FastAPI Server (python/api/server.py)                   │
 ├─────────────────────────────────────────────────────────────┤
-│  Orchestration Layer                                         │
+│  Orchestration Layer                                        │
 │  ├─ Router (objective detection, verification)              │
 │  ├─ Policy (VerifierFirstPolicy, self-consistency)          │
 │  └─ Planner (JSON plan generation, repair)                  │
 ├─────────────────────────────────────────────────────────────┤
-│  LLM Layer                                                   │
-│  ├─ Student: nvidia/OpenMath-Nemotron-7B (vLLM)            │
+│  LLM Layer                                                  │
+│  ├─ Student: nvidia/OpenMath-Nemotron-7B (vLLM)             │
 │  ├─ Teacher: Fallback model (rate-limited)                  │
-│  └─ Talker: Llama-3.1-8B (explanations)                    │
+│  └─ Talker: Llama-3.1-8B (explanations)                     │
 ├─────────────────────────────────────────────────────────────┤
-│  Execution Layer                                             │
+│  Execution Layer                                            │
 │  ├─ Tool Runtime (integrate, diff, solve_equation)          │
 │  ├─ Verification (symbolic + numeric + units)               │
 │  └─ Guard (result preservation, explanation checking)       │
 ├─────────────────────────────────────────────────────────────┤
-│  C++ Core (mathcore module)                                  │
+│  C++ Core (mathcore module)                                 │
 │  ├─ Symbolic Engine (SymEngine 0.11.2)                      │
 │  ├─ Numeric Probes (Eigen 3.4.0)                            │
-│  ├─ ODE Solver (RK4)                                         │
+│  ├─ ODE Solver (RK4)                                        │
 │  └─ Unit System (Pint integration)                          │
 └─────────────────────────────────────────────────────────────┘
 ```
